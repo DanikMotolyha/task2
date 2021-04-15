@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Task 2 var 9. Topik - Почтовые открытки -->
+<OLD_CARDS>
+    <Card id = "Card001">
+        <Thema>городской пейзаж</Thema>
+        <Type name = "обычная" send = "true"/>
+        <Country>Беларусь</Country>
+        <Date>1998-12-20</Date>
+        <Authors>
+            <Author>
+                <name>Sebastian</name>
+                <serName>Lauge</serName>
+            </Author>
+        </Authors>
+        <Valuable>тематическая</Valuable>
+    </Card>
+    <Card id = "Card002">
+        <Thema>городской пейзаж</Thema>
+        <Type name = "обычная" send = "true"/>
+        <Country>Беларусь</Country>
+        <Date>1998-12-20</Date>
+        <Authors>
+            <Author>
+                <name>Sebastian</name>
+                <serName>Lauge</serName>
+            </Author>
+        </Authors>
+        <Valuable>тематическая</Valuable>
+    </Card>
+</OLD_CARDS>
