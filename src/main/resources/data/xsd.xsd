@@ -1,78 +1,101 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-<xs:element name ="OLD_CARDS" >
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name ="Card" minOccurs="1" maxOccurs="unbounded">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="Thema" >
-                            <xs:simpleType>
-                                <xs:restriction base="xs:string">
-                                    <xs:enumeration value="городской пейзаж"/>
-                                    <xs:enumeration value="природа"/>
-                                    <xs:enumeration value="люди"/>
-                                    <xs:enumeration value="религия"/>
-                                    <xs:enumeration value="спорт"/>
-                                    <xs:enumeration value="архитектура"/>
-                                </xs:restriction>
-                            </xs:simpleType>
-                        </xs:element>
 
-                        <xs:element name = "Type" minOccurs="0">
-                            <xs:complexType>
-                                <xs:attribute name="name" default="обычная">
-                                    <xs:simpleType>
-                                        <xs:restriction base = "xs:string">
-                                            <xs:enumeration value="поздравительная"/>
-                                            <xs:enumeration value="обычная"/>
-                                            <xs:enumeration value="рекламная"/>
-                                        </xs:restriction>
-                                    </xs:simpleType>
-                                </xs:attribute>
-                                <xs:attribute name="send" default="false" type="xs:boolean"/>
-                            </xs:complexType>
-                        </xs:element>
-                        <xs:element name="Country" type="xs:string"/>
 
-                        <xs:element name="Date" type = "xs:date">
-                        </xs:element>
-                        
-                        <xs:element name="Authors" minOccurs="0" maxOccurs="1">
-                            <xs:complexType>
-                                <xs:sequence>
-                                    <xs:element name="Author" minOccurs="1" maxOccurs="5">
-                                        <xs:complexType>
-                                            <xs:sequence>
-                                                <xs:element name="name" type="xs:string"/>
-                                                <xs:element name="serName" type="xs:string"/>
-                                            </xs:sequence>
-                                        </xs:complexType>
-                                    </xs:element>
-                                </xs:sequence>
-                            </xs:complexType>
-                        </xs:element>
+    <!-- definition of simple elements -->
+    <xs:element name="Them">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="cityscape"/>
+                <xs:enumeration value="nature"/>
+                <xs:enumeration value="people"/>
+                <xs:enumeration value="religion"/>
+                <xs:enumeration value="sport"/>
+                <xs:enumeration value="architecture"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
 
-                        <xs:element name="Valuable">
-                            <xs:simpleType>
-                                <xs:restriction base="xs:string">
-                                    <xs:enumeration value="тематическая"/>
-                                    <xs:enumeration value="коллекционная"/>
-                                    <xs:enumeration value="историческая"/>
-                                </xs:restriction>
-                            </xs:simpleType>
-                        </xs:element>
-                    </xs:sequence>
-                    <xs:attribute name="id" use="required">
-                        <xs:simpleType>
-                                <xs:restriction base="xs:ID">
-                                    <xs:pattern value="Card\d{3}"/>
-                                </xs:restriction>
-                            </xs:simpleType>
-                    </xs:attribute>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
+
+    <xs:element name="Valuable">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="advertising"/>
+                <xs:enumeration value="collectible"/>
+                <xs:enumeration value="historical"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="Country">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Belarus"/>
+                <xs:enumeration value="China"/>
+                <xs:enumeration value="Canada"/>
+                <xs:enumeration value="Australia"/>
+                <xs:enumeration value="USA"/>
+                <xs:enumeration value="UK"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <!-- definition of attributes -->
+    <xs:attribute name="id">
+        <xs:simpleType>
+            <xs:restriction base="xs:ID">
+                <xs:pattern value="Card\d{3}"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="type_name">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="advertising"/>
+                <xs:enumeration value="congratulatory"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:element name="Authors">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Author" minOccurs="1" maxOccurs="5">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string"/>
+                            <xs:element name="ser-name" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="Card">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Them"/>
+                <xs:element ref="Country"/>
+                <xs:element name="Date" type="xs:date"/>
+                <xs:element ref="Authors" minOccurs="0" maxOccurs="5"/>
+                <xs:element ref="Valuable"/>
+            </xs:sequence>
+            <xs:attribute name="send" use="optional" default="false"/>
+            <xs:attribute name="card-type" type="xs:string" use="required"/>
+            <xs:attribute ref="id" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="OLD_CARDS">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Card" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
 </xs:schema>

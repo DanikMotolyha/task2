@@ -1,30 +1,211 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Task 2 var 9. Topik - Почтовые открытки -->
 <OLD_CARDS>
-    <Card id = "Card001">
-        <Thema>городской пейзаж</Thema>
-        <Type name = "обычная" send = "true"/>
-        <Country>Беларусь</Country>
+    <Card  card-type = "advertising" id = "Card001" send = "true">
+        <Them>cityscape</Them>
+        <Country>Belarus</Country>
         <Date>1998-12-20</Date>
         <Authors>
             <Author>
                 <name>Sebastian</name>
-                <serName>Lauge</serName>
+                <ser-name>Lauge</ser-name>
             </Author>
         </Authors>
-        <Valuable>тематическая</Valuable>
+        <Valuable>historical</Valuable>
     </Card>
-    <Card id = "Card002">
-        <Thema>городской пейзаж</Thema>
-        <Type name = "обычная" send = "true"/>
-        <Country>Беларусь</Country>
+    <Card card-type = "congratulatory" id = "Card002">
+        <Them>nature</Them>
+        <Country>USA</Country>
         <Date>1998-12-20</Date>
         <Authors>
             <Author>
                 <name>Sebastian</name>
-                <serName>Lauge</serName>
+                <ser-name>Lauge</ser-name>
             </Author>
         </Authors>
-        <Valuable>тематическая</Valuable>
+        <Valuable>collectible</Valuable>
+    </Card>
+    <Card card-type = "advertising" id = "Card003">
+        <Them>nature</Them>
+        <Country>Canada</Country>
+        <Date>1997-06-26</Date>
+        <Authors>
+            <Author>
+                <name>Danik</name>
+                <ser-name>Motolyha</ser-name>
+            </Author>
+        </Authors>
+        <Valuable>historical</Valuable>
+    </Card>
+    <Card card-type = "advertising" id = "Card004" send="true">
+        <Them>people</Them>
+        <Country>China</Country>
+        <Date>1997-06-26</Date>
+        <Authors>
+            <Author>
+                <name>Danik</name>
+                <ser-name>Motolyha</ser-name>
+            </Author>
+        </Authors>
+        <Valuable>collectible</Valuable>
+    </Card>
+    <Card card-type = "congratulatory" id = "Card005">
+        <Them>sport</Them>
+        <Country>USA</Country>
+        <Date>2000-12-06</Date>
+        <Authors>
+            <Author>
+                <name>Edward</name>
+                <ser-name>Warner</ser-name>
+            </Author>
+            <Author>
+                <name>Amos</name>
+                <ser-name>Evans</ser-name>
+            </Author>
+            <Author>
+                <name>Ralph</name>
+                <ser-name>Hamilton</ser-name>
+            </Author>
+        </Authors>
+        <Valuable>collectible</Valuable>
+    </Card>
+    <Card card-type = "congratulatory" id = "Card006">
+        <Them>sport</Them>
+        <Country>USA</Country>
+        <Date>2010-12-06</Date>
+        <Authors>
+            <Author>
+                <name>Edward</name>
+                <ser-name>Warner</ser-name>
+            </Author>
+            <Author>
+                <name>Ralph</name>
+                <ser-name>Hamilton</ser-name>
+            </Author>
+        </Authors>
+        <Valuable>collectible</Valuable>
+    </Card>
+    <Card card-type = "congratulatory" id = "Card007">
+        <Them>sport</Them>
+        <Country>Canada</Country>
+        <Date>2013-12-06</Date>
+        <Authors>
+            <Author>
+                <name>John</name>
+                <ser-name>McDaniel</ser-name>
+            </Author>
+        </Authors>
+        <Valuable>advertising</Valuable>
+    </Card>
+    <Card card-type = "advertising" id = "Card008">
+        <Them>sport</Them>
+        <Country>USA</Country>
+        <Date>2010-12-06</Date>
+        <Authors>
+            <Author>
+                <name>Edward</name>
+                <ser-name>Warner</ser-name>
+            </Author>
+            <Author>
+                <name>Ralph</name>
+                <ser-name>Hamilton</ser-name>
+            </Author>
+        </Authors>
+        <Valuable>collectible</Valuable>
+    </Card>
+    <Card card-type = "advertising" id = "Card009">
+        <Them>religion</Them>
+        <Country>China</Country>
+        <Date>2010-12-06</Date>
+        <Authors>
+            <Author>
+                <name>Christopher</name>
+                <ser-name>Foster</ser-name>
+            </Author>
+        </Authors>
+        <Valuable>collectible</Valuable>
+    </Card>
+    <Card card-type = "advertising" id = "Card010">
+        <Them>architecture</Them>
+        <Country>UK</Country>
+        <Date>2010-12-06</Date>
+        <Authors>
+            <Author>
+                <name>Thomas</name>
+                <ser-name>Kelley</ser-name>
+            </Author>
+        </Authors>
+        <Valuable>collectible</Valuable>
+    </Card>
+    <Card card-type = "congratulatory" id = "Card011">
+        <Them>architecture</Them>
+        <Country>Australia</Country>
+        <Date>2010-12-06</Date>
+        <Authors>
+            <Author>
+                <name>Calvin</name>
+                <ser-name>Hensley</ser-name>
+            </Author>
+        </Authors>
+        <Valuable>historical</Valuable>
+    </Card>
+    <Card card-type = "advertising" id = "Card012">
+        <Them>architecture</Them>
+        <Country>Australia</Country>
+        <Date>2010-12-06</Date>
+        <Authors>
+            <Author>
+                <name>William</name>
+                <ser-name>Elliott</ser-name>
+            </Author>
+        </Authors>
+        <Valuable>historical</Valuable>
+    </Card>
+    <Card card-type = "advertising" id = "Card013">
+        <Them>architecture</Them>
+        <Country>Australia</Country>
+        <Date>2010-12-06</Date>
+        <Authors>
+            <Author>
+                <name>Rodney</name>
+                <ser-name>Gordon</ser-name>
+            </Author>
+        </Authors>
+        <Valuable>historical</Valuable>
+    </Card>
+    <Card card-type = "advertising" id = "Card014">
+        <Them>architecture</Them>
+        <Country>Australia</Country>
+        <Date>2010-12-06</Date>
+        <Authors>
+            <Author>
+                <name>Rodney</name>
+                <ser-name>Gordon</ser-name>
+            </Author>
+        </Authors>
+        <Valuable>historical</Valuable>
+    </Card>
+    <Card card-type = "advertising" id = "Card015">
+        <Them>architecture</Them>
+        <Country>Australia</Country>
+        <Date>2010-12-06</Date>
+        <Authors>
+            <Author>
+                <name>Hugo</name>
+                <ser-name>Daniel</ser-name>
+            </Author>
+        </Authors>
+        <Valuable>historical</Valuable>
+    </Card>
+    <Card card-type = "advertising" id = "Card016">
+        <Them>architecture</Them>
+        <Country>Australia</Country>
+        <Date>2010-12-06</Date>
+        <Authors>
+            <Author>
+                <name>Thomas</name>
+                <ser-name>Kelley</ser-name>
+            </Author>
+        </Authors>
+        <Valuable>historical</Valuable>
     </Card>
 </OLD_CARDS>
