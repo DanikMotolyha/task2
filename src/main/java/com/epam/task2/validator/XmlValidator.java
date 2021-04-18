@@ -15,18 +15,10 @@ import javax.xml.validation.Validator;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.net.URL;
 
 public class XmlValidator {
     private final static Logger LOGGER = LogManager.getLogger(XmlValidator.class);
     private final static String SCHEMA_NAME = "data/xsd.xsd";
-    private final static String SCHEMA_PATH;
-
-    static {
-        ClassLoader classLoader = XmlValidator.class.getClassLoader();
-        URL resource = classLoader.getResource(SCHEMA_NAME);
-        SCHEMA_PATH = new File(resource.getFile()).getAbsolutePath();
-    }
 
     public static boolean validate(String filePath) throws XmlException {
         LOGGER.log(Level.INFO, "run func with filePath :" + filePath);
@@ -42,7 +34,7 @@ public class XmlValidator {
         } catch (URISyntaxException e) {
             throw new XmlException("cannot open resource file" + filePath, e);
         } catch (SAXException e) {
-            LOGGER.log(Level.WARN, filePath + " is not valid, details" + e.getMessage());
+            LOGGER.log(Level.WARN, filePath + " is not valid, details " + e.getMessage());
             return false;
         }
         return true;

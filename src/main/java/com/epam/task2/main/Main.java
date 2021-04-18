@@ -14,7 +14,7 @@ import java.util.Set;
 public class Main {
 
     public static void main(String[] args) throws XmlException, URISyntaxException {
-        String fileName = FileResourcesUtil.getFileFromResource("data/stressTest.xml").getAbsolutePath();
+        String fileName = FileResourcesUtil.getFileFromResource("data/xml.xml").getAbsolutePath();
         System.out.println(XmlValidator.validate(fileName));
         CardSaxBuilder saxBuilder = new CardSaxBuilder();
         CardDomBuilder domBuilder = new CardDomBuilder();
